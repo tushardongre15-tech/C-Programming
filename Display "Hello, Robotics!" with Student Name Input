@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    char name[50];
+
+    printf("Enter Student Name: ");
+    scanf(" %[^\n]", name);
+
+    printf("\nHello, Robotics!");
+    printf("\nStudent Name: %s", name);
+
+    return 0;
+}
