@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    int duty = 50;
+
+    printf("PWM Simulation\n");
+    printf("Duty Cycle = %d%%\n", duty);
+
+    for(i = 1; i <= 10; i++)
+    {
+        printf("Pulse %d: ", i);
+
+        if(i <= 5)
+            printf("ON\n");
+        else
+            printf("OFF\n");
+    }
+
+    return 0;
+}
