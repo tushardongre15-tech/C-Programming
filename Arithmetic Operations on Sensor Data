@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int s1, s2;
+
+    printf("Enter Sensor 1 Value: ");
+    scanf("%d", &s1);
+
+    printf("Enter Sensor 2 Value: ");
+    scanf("%d", &s2);
+
+    printf("\nAddition = %d", s1 + s2);
+    printf("\nSubtraction = %d", s1 - s2);
+    printf("\nMultiplication = %d", s1 * s2);
+
+    if(s2 != 0)
+        printf("\nDivision = %.2f", (float)s1 / s2);
+    else
+        printf("\nDivision not possible");
+
+    return 0;
+}
