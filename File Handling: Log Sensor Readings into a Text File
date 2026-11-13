@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+    int sensor, i;
+
+    fp = fopen("sensor_log.txt", "w");
+
+    if(fp == NULL)
+    {
+        printf("File cannot be opened");
+        return 1;
+    }
+
+    for(i = 1; i <= 5; i++)
+    {
+        printf("Enter Sensor Reading %d: ", i);
+        scanf("%d", &sensor);
+
+        fprintf(fp, "Sensor %d = %d\n", i, sensor);
+    }
+
+    fclose(fp);
+
+    printf("\nSensor readings saved successfully!");
+
+    return 0;
+}
