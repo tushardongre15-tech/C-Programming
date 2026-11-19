@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main()
+{
+    int sensor[5];
+    int i;
+
+    printf("Enter 5 IR Sensor Values (0 or 1):\n");
+
+    for(i = 0; i < 5; i++)
+    {
+        scanf("%d", &sensor[i]);
+
+        if(sensor[i] != 0 && sensor[i] != 1)
+        {
+            printf("Invalid Sensor Value");
+            return 0;
+        }
+    }
+
+    if(sensor[0] == 0 && sensor[1] == 0 &&
+       sensor[2] == 1 && sensor[3] == 0 &&
+       sensor[4] == 0)
+    {
+        printf("Robot Moves Forward");
+    }
+    else if(sensor[0] == 1 && sensor[1] == 1 &&
+            sensor[2] == 1 && sensor[3] == 1 &&
+            sensor[4] == 1)
+    {
+        printf("Stop - Junction Found");
+    }
+    else if(sensor[0] == 0 && sensor[1] == 0 &&
+            sensor[2] == 0 && sensor[3] == 0 &&
+            sensor[4] == 0)
+    {
+        printf("Stop - Line Lost");
+    }
+    else if(sensor[0] == 1 || sensor[1] == 1)
+    {
+        printf("Robot Turns Left");
+    }
+    else if(sensor[3] == 1 || sensor[4] == 1)
+    {
+        printf("Robot Turns Right");
+    }
+    else
+    {
+        printf("Robot Moves Forward");
+    }
+
+    return 0;
+}
