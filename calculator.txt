@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+void calculate(int a, int b, int optr)
+{
+        if (optr == 1)
+    {
+        cout << (a + b);
+    }
+
+        else if (optr == 2)
+    {
+        cout << (a - b);
+    }
+
+    else if (optr == 3)
+    {
+        cout << (a * b);
+    }
+
+   
+    else
+    {
+        cout << "Invalid Input";
+    }
+}
+
+int main()
+{
+    int a = 1, b = 2, optr = 3;
+
+    calculate(a, b, optr);
+
+    return 0;
+}
